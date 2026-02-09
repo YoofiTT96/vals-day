@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Very Important Question</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Floating hearts background -->
+    <div id="floating-hearts"></div>
+
+    <!-- ===== SECTION 1: LOADING SCREEN ===== -->
+    <section id="loading-screen" class="screen active">
+        <div class="loading-content">
+            <div class="loading-character">
+                <!-- POP ART HIM - NERVOUS (Lichtenstein style) -->
+                <svg viewBox="0 0 260 360" class="cartoon-him nervous" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <pattern id="dots-skin" width="5" height="5" patternUnits="userSpaceOnUse">
+                            <circle cx="2.5" cy="2.5" r="1.3" fill="#3D2510" opacity="0.3"/>
+                        </pattern>
+                        <pattern id="dots-blue" width="6" height="6" patternUnits="userSpaceOnUse">
+                            <circle cx="3" cy="3" r="1.6" fill="#002255" opacity="0.3"/>
+                        </pattern>
+                        <pattern id="dots-bg" width="4" height="4" patternUnits="userSpaceOnUse">
+                            <circle cx="2" cy="2" r="0.8" fill="#000" opacity="0.06"/>
+                        </pattern>
+                    </defs>
+
+                    <!-- Pop art yellow burst background -->
+                    <circle cx="130" cy="175" r="165" fill="#FFDD00" opacity="0.12"/>
+                    <circle cx="130" cy="175" r="165" fill="url(#dots-bg)"/>
+
+                    <!-- Ground shadow -->
+                    <ellipse cx="130" cy="340" rx="60" ry="8" fill="#000" opacity="0.15"/>
+
+                    <!-- === LEGS === -->
+                    <rect x="96" y="268" width="28" height="55" rx="3" fill="#1a1a1a" stroke="#000" stroke-width="3.5"/>
+                    <rect x="136" y="268" width="28" height="55" rx="3" fill="#1a1a1a" stroke="#000" stroke-width="3.5"/>
+                    <rect x="92" y="318" width="36" height="14" rx="2" fill="#222" stroke="#000" stroke-width="3.5"/>
+                    <rect x="132" y="318" width="36" height="14" rx="2" fill="#222" stroke="#000" stroke-width="3.5"/>
+
+                    <!-- === BODY (WIDE, muscular, bold blue tee) === -->
+                    <path d="M 52 186 L 52 270 Q 52 276 60 276 L 200 276 Q 208 276 208 270 L 208 186 Q 208 174 195 170 L 165 166 L 95 166 L 65 170 Q 52 174 52 186 Z" fill="#0055CC" stroke="#000" stroke-width="3.5"/>
+                    <path d="M 52 186 L 52 270 Q 52 276 60 276 L 200 276 Q 208 276 208 270 L 208 186 Q 208 174 195 170 L 165 166 L 95 166 L 65 170 Q 52 174 52 186 Z" fill="url(#dots-blue)"/>
+                    <!-- V-neck -->
+                    <path d="M 105 166 L 130 192 L 155 166" stroke="#002255" fill="none" stroke-width="4" stroke-linejoin="miter"/>
+                    <!-- Sleeve line to show muscles -->
+                    <path d="M 52 186 Q 52 180 65 178" stroke="#002255" fill="none" stroke-width="2.5"/>
+                    <path d="M 208 186 Q 208 180 195 178" stroke="#002255" fill="none" stroke-width="2.5"/>
+
+                    <!-- === ARMS (thick, muscular!) === -->
+                    <!-- Left arm - HUGE bicep -->
+                    <path d="M 52 182 Q 30 186 22 210 Q 16 232 28 252" fill="#5D3A1A" stroke="#000" stroke-width="3.5"/>
+                    <path d="M 52 182 Q 30 186 22 210 Q 16 232 28 252" fill="url(#dots-skin)"/>
+                    <!-- Bicep bulge line -->
+                    <path d="M 36 198 Q 30 208 34 220" stroke="#3D2510" fill="none" stroke-width="2" opacity="0.4"/>
+                    <!-- Right arm -->
+                    <path d="M 208 182 Q 230 186 238 210 Q 244 232 232 252" fill="#5D3A1A" stroke="#000" stroke-width="3.5"/>
+                    <path d="M 208 182 Q 230 186 238 210 Q 244 232 232 252" fill="url(#dots-skin)"/>
+                    <!-- Bicep bulge -->
+                    <path d="M 224 198 Q 230 208 226 220" stroke="#3D2510" fill="none" stroke-width="2" opacity="0.4"/>
+                    <!-- Tribal tattoo on right arm (bold angular) -->
+                    <path d="M 226 196 L 234 190 L 230 204 L 238 200" stroke="#1a1a1a" fill="none" stroke-width="3.5" stroke-linecap="square"/>
+                    <path d="M 222 208 L 232 206 L 228 216" stroke="#1a1a1a" fill="none" stroke-width="3" stroke-linecap="square"/>
+                    <!-- Fists (clenched nervously) -->
+                    <circle cx="30" cy="256" r="16" fill="#5D3A1A" stroke="#000" stroke-width="3.5"/>
+                    <circle cx="30" cy="256" r="16" fill="url(#dots-skin)"/>
+                    <circle cx="230" cy="256" r="16" fill="#5D3A1A" stroke="#000" stroke-width="3.5"/>
+                    <circle cx="230" cy="256" r="16" fill="url(#dots-skin)"/>
+
+                    <!-- === THICK NECK === -->
+                    <rect x="108" y="148" width="44" height="24" fill="#5D3A1A" stroke="#000" stroke-width="3.5"/>
+                    <rect x="108" y="148" width="44" height="24" fill="url(#dots-skin)"/>
+
+                    <!-- === HEAD (bald, shiny dome) === -->
+                    <circle cx="130" cy="95" r="64" fill="#5D3A1A" stroke="#000" stroke-width="3.5"/>
+                    <circle cx="130" cy="95" r="64" fill="url(#dots-skin)"/>
+                    <!-- Bold head shine (pop art style) -->
+                    <ellipse cx="108" cy="50" rx="32" ry="14" fill="white" opacity="0.35"/>
+                    <ellipse cx="112" cy="46" rx="18" ry="7" fill="white" opacity="0.25"/>
+
+                    <!-- === EARS === -->
+                    <ellipse cx="66" cy="100" rx="13" ry="18" fill="#5D3A1A" stroke="#000" stroke-width="3.5"/>
+                    <ellipse cx="194" cy="100" rx="13" ry="18" fill="#5D3A1A" stroke="#000" stroke-width="3.5"/>
+
+                    <!-- === EYES (Pop art: bold, wide with worry) === -->
+                    <ellipse cx="108" cy="90" rx="17" ry="19" fill="white" stroke="#000" stroke-width="3.5"/>
+                    <circle cx="110" cy="92" r="12" fill="#1a1a1a"/>
+                    <circle cx="114" cy="86" r="5.5" fill="white"/>
+                    <ellipse cx="152" cy="90" rx="17" ry="19" fill="white" stroke="#000" stroke-width="3.5"/>
+                    <circle cx="150" cy="92" r="12" fill="#1a1a1a"/>
+                    <circle cx="154" cy="86" r="5.5" fill="white"/>
+
+                    <!-- Thick worried eyebrows (inner ends UP) -->
+                    <path d="M 88 68 Q 102 80 122 72" stroke="#000" fill="none" stroke-width="7" stroke-linecap="square"/>
+                    <path d="M 172 68 Q 158 80 138 72" stroke="#000" fill="none" stroke-width="7" stroke-linecap="square"/>
+
+                    <!-- === NOSE (angular pop art) === -->
+                    <path d="M 124 102 L 130 118 L 136 102" stroke="#000" fill="none" stroke-width="3.5" stroke-linejoin="round"/>
+
+                    <!-- === FULL THICK BEARD === -->
+                    <path d="M 76 108 Q 74 128 82 148 Q 96 172 130 176 Q 164 172 178 148 Q 186 128 184 108 Q 174 122 130 128 Q 86 122 76 108 Z" fill="#0D0D0D" stroke="#000" stroke-width="3.5"/>
+
+                    <!-- Nervous zigzag mouth in beard -->
+                    <path d="M 102 142 L 110 150 L 118 140 L 126 150 L 134 140 L 142 150 L 150 142" stroke="white" fill="none" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/>
+
+                    <!-- === POP ART EFFECTS === -->
+                    <!-- Yellow speech bubble "!!" -->
+                    <path d="M 188 30 L 248 8 L 258 8 L 258 56 L 248 56 L 200 56 L 192 70 L 196 52 L 188 52 Z" fill="#FFDD00" stroke="#000" stroke-width="3.5"/>
+                    <text x="212" y="44" font-size="30" font-weight="900" fill="#FF0000" font-family="Impact, sans-serif">!!</text>
+
+                    <!-- Triangular sweat drops -->
+                    <g class="sweat-drop">
+                        <path d="M 198 68 L 202 48 L 194 48 Z" fill="#00BFFF" stroke="#000" stroke-width="2.5"/>
+                    </g>
+                    <g class="sweat-drop delay">
+                        <path d="M 60 58 L 64 40 L 56 40 Z" fill="#00BFFF" stroke="#000" stroke-width="2.5"/>
+                    </g>
+
+                    <!-- Bold speed/stress lines -->
+                    <line x1="202" y1="80" x2="230" y2="74" stroke="#000" stroke-width="4" stroke-linecap="square"/>
+                    <line x1="200" y1="92" x2="228" y2="89" stroke="#000" stroke-width="3" stroke-linecap="square"/>
+                    <line x1="198" y1="104" x2="224" y2="104" stroke="#000" stroke-width="2.5" stroke-linecap="square"/>
+
+                    <!-- "GULP!" rotated -->
+                    <text x="12" y="46" font-size="16" font-weight="900" fill="#FF0000" font-family="Impact, sans-serif" transform="rotate(-12 12 46)">GULP!</text>
+                </svg>
+            </div>
+            <div class="loading-text-area">
+                <p id="loading-msg" class="loading-msg">Downloading courage.exe...</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <p class="loading-percent" id="loading-percent">0%</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 2: INTRO ===== -->
+    <section id="intro-screen" class="screen">
+        <div class="intro-content">
+            <h1 class="intro-title">Hey Naa... <span class="wave">&#x1F44B;</span></h1>
+            <p class="intro-subtitle">I have something <em>very</em> important to tell you...</p>
+
+            <div class="characters-duo">
+                <div class="character-wrapper him-wrapper">
+                    <!-- GHIBLI HIM - WAVING (soft, warm, dreamy) -->
+                    <svg viewBox="0 0 250 340" class="cartoon-him ghibli-style" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <radialGradient id="gSkin" cx="38%" cy="30%">
+                                <stop offset="0%" stop-color="#7A5030"/>
+                                <stop offset="50%" stop-color="#5D3A1A"/>
+                                <stop offset="100%" stop-color="#3D2510"/>
+                            </radialGradient>
+                            <radialGradient id="gIris" cx="35%" cy="35%">
+                                <stop offset="0%" stop-color="#4A3020"/>
+                                <stop offset="100%" stop-color="#1a0f08"/>
+                            </radialGradient>
+                        </defs>
+
+                        <!-- Soft warm glow -->
+                        <ellipse cx="120" cy="170" rx="95" ry="140" fill="#FFE8D6" opacity="0.08"/>
+
+                        <!-- Shadow -->
+                        <ellipse cx="120" cy="325" rx="50" ry="5" fill="#3D2510" opacity="0.06"/>
+
+                        <!-- === LEGS === -->
+                        <path d="M 88 262 Q 86 285 88 304 Q 90 312 100 312" fill="#2D2D3A"/>
+                        <path d="M 112 262 Q 114 285 112 304 Q 110 312 100 312" fill="#3a3a4a"/>
+                        <path d="M 128 262 Q 126 285 128 304 Q 130 312 140 312" fill="#2D2D3A"/>
+                        <path d="M 152 262 Q 154 285 152 304 Q 150 312 140 312" fill="#3a3a4a"/>
+                        <ellipse cx="100" cy="314" rx="16" ry="5" fill="#3a3a4a" stroke="#2a2a38" stroke-width="1"/>
+                        <ellipse cx="140" cy="314" rx="16" ry="5" fill="#3a3a4a" stroke="#2a2a38" stroke-width="1"/>
+
+                        <!-- === BODY (wide, muscular, muted teal shirt) === -->
+                        <path d="M 58 190 Q 58 178 76 174 L 164 174 Q 182 178 182 190 L 182 264 Q 182 270 172 270 L 68 270 Q 58 270 58 264 Z" fill="#4A7D8C" stroke="#3D6A78" stroke-width="1.2"/>
+                        <!-- Soft collar -->
+                        <path d="M 98 174 Q 120 188 142 174" fill="#3D6A78" stroke="#345D6A" stroke-width="1"/>
+                        <!-- Fabric fold hint -->
+                        <path d="M 72 218 Q 76 226 72 234" stroke="#3D6A78" fill="none" stroke-width="0.8" opacity="0.3"/>
+
+                        <!-- === LEFT ARM (muscular, at side) === -->
+                        <path d="M 58 194 Q 36 200 28 224 Q 22 246 32 264" fill="url(#gSkin)" stroke="#3D2510" stroke-width="1.2"/>
+                        <!-- Arm muscle definition -->
+                        <path d="M 40 216 Q 35 226 38 238" stroke="#4A2D18" fill="none" stroke-width="0.8" opacity="0.2"/>
+                        <circle cx="34" cy="268" r="13" fill="url(#gSkin)" stroke="#3D2510" stroke-width="1.2"/>
+
+                        <!-- === RIGHT ARM (waving up, muscular) === -->
+                        <g class="waving-arm-group">
+                            <path d="M 182 194 Q 202 176 212 148 Q 216 132 222 120" fill="url(#gSkin)" stroke="#3D2510" stroke-width="1.2" stroke-linecap="round"/>
+                            <!-- Arm thickness/muscle -->
+                            <path d="M 198 164 Q 206 156 210 144" stroke="#4A2D18" fill="none" stroke-width="0.8" opacity="0.15"/>
+                            <!-- Tribal tattoo (subtle, soft) -->
+                            <path d="M 204 156 C 210 150 206 142 212 136" stroke="#3D2510" fill="none" stroke-width="1.5" opacity="0.25"/>
+                            <path d="M 200 148 Q 208 142 206 134" stroke="#3D2510" fill="none" stroke-width="1" opacity="0.2"/>
+                            <!-- Open hand -->
+                            <circle cx="224" cy="112" r="14" fill="url(#gSkin)" stroke="#3D2510" stroke-width="1.2"/>
+                            <path d="M 218 106 L 215 98" stroke="#5D3A1A" fill="none" stroke-width="1" opacity="0.3" stroke-linecap="round"/>
+                            <path d="M 224 104 L 223 96" stroke="#5D3A1A" fill="none" stroke-width="1" opacity="0.3" stroke-linecap="round"/>
+                            <path d="M 230 106 L 232 98" stroke="#5D3A1A" fill="none" stroke-width="1" opacity="0.3" stroke-linecap="round"/>
+                        </g>
+                        <!-- Ghibli sparkle trail -->
+                        <circle cx="240" cy="100" r="2.5" fill="#FFE4B5" opacity="0.5" class="ghibli-sparkle s1"/>
+                        <circle cx="244" cy="112" r="1.8" fill="#FFD700" opacity="0.4" class="ghibli-sparkle s2"/>
+                        <circle cx="238" cy="124" r="2" fill="#FFF" opacity="0.35" class="ghibli-sparkle s3"/>
+
+                        <!-- === THICK NECK === -->
+                        <rect x="104" y="155" width="32" height="24" rx="8" fill="url(#gSkin)" stroke="#3D2510" stroke-width="1.2"/>
+
+                        <!-- === BALD HEAD (Ghibli: warm, round, subtle glow) === -->
+                        <ellipse cx="120" cy="100" rx="58" ry="62" fill="url(#gSkin)" stroke="#3D2510" stroke-width="1.2"/>
+                        <!-- Warm highlight on bald head -->
+                        <ellipse cx="102" cy="58" rx="30" ry="18" fill="#7A5030" opacity="0.15"/>
+                        <!-- Ghibli-style soft head shine -->
+                        <ellipse cx="100" cy="50" rx="22" ry="8" fill="white" opacity="0.08"/>
+                        <ellipse cx="104" cy="47" rx="12" ry="4" fill="white" opacity="0.06"/>
+
+                        <!-- === EARS === -->
+                        <ellipse cx="62" cy="105" rx="9" ry="16" fill="url(#gSkin)" stroke="#3D2510" stroke-width="1.2"/>
+                        <ellipse cx="62" cy="105" rx="4" ry="9" fill="#4A2D18" opacity="0.15"/>
+                        <ellipse cx="178" cy="105" rx="9" ry="16" fill="url(#gSkin)" stroke="#3D2510" stroke-width="1.2"/>
+                        <ellipse cx="178" cy="105" rx="4" ry="9" fill="#4A2D18" opacity="0.15"/>
+
+                        <!-- === EYES (Ghibli: large, warm, deeply detailed) === -->
+                        <!-- Left eye -->
+                        <ellipse cx="100" cy="96" rx="14" ry="16" fill="white" stroke="#3D2510" stroke-width="1.2"/>
+                        <circle cx="102" cy="98" r="11" fill="url(#gIris)"/>
+                        <circle cx="102" cy="98" r="7.5" fill="none" stroke="#3D2510" stroke-width="0.4" opacity="0.2"/>
+                        <circle cx="102" cy="98" r="5.5" fill="#0D0D0D"/>
+                        <ellipse cx="106" cy="92" rx="4.5" ry="4" fill="white" opacity="0.85"/>
+                        <circle cx="98" cy="103" r="2.5" fill="white" opacity="0.45"/>
+                        <circle cx="104" cy="100" r="1.2" fill="#7A5030" opacity="0.35"/>
+                        <!-- Right eye -->
+                        <ellipse cx="140" cy="96" rx="14" ry="16" fill="white" stroke="#3D2510" stroke-width="1.2"/>
+                        <circle cx="138" cy="98" r="11" fill="url(#gIris)"/>
+                        <circle cx="138" cy="98" r="7.5" fill="none" stroke="#3D2510" stroke-width="0.4" opacity="0.2"/>
+                        <circle cx="138" cy="98" r="5.5" fill="#0D0D0D"/>
+                        <ellipse cx="142" cy="92" rx="4.5" ry="4" fill="white" opacity="0.85"/>
+                        <circle cx="134" cy="103" r="2.5" fill="white" opacity="0.45"/>
+                        <circle cx="140" cy="100" r="1.2" fill="#7A5030" opacity="0.35"/>
+
+                        <!-- Gentle eyebrows -->
+                        <path d="M 84 78 Q 98 70 114 78" stroke="#1a1a1a" fill="none" stroke-width="2.5" stroke-linecap="round"/>
+                        <path d="M 126 78 Q 140 70 156 78" stroke="#1a1a1a" fill="none" stroke-width="2.5" stroke-linecap="round"/>
+
+                        <!-- Ghibli nose (minimal) -->
+                        <path d="M 118 112 Q 120 116 122 112" stroke="#4A2D18" fill="none" stroke-width="1.2" opacity="0.4" stroke-linecap="round"/>
+
+                        <!-- === FULL BEARD (soft, organic) === -->
+                        <path d="M 74 112 Q 72 132 80 150 Q 94 174 120 178 Q 146 174 160 150 Q 168 132 166 112 Q 156 126 120 130 Q 84 126 74 112 Z" fill="#0D0D0D" stroke="#0a0a0a" stroke-width="0.8"/>
+                        <!-- Soft beard texture -->
+                        <path d="M 90 130 Q 94 142 92 152" stroke="#1a1a1a" fill="none" stroke-width="0.6" opacity="0.2"/>
+                        <path d="M 120 132 Q 120 144 120 154" stroke="#1a1a1a" fill="none" stroke-width="0.6" opacity="0.2"/>
+                        <path d="M 150 130 Q 146 142 148 152" stroke="#1a1a1a" fill="none" stroke-width="0.6" opacity="0.2"/>
+                        <!-- Warm confident smile -->
+                        <path d="M 100 142 Q 120 158 140 142" stroke="#D4C4B0" fill="none" stroke-width="1.8" stroke-linecap="round"/>
+                        <path d="M 106 144 Q 120 154 134 144" fill="white" opacity="0.5"/>
+
+                        <!-- Floating particles -->
+                        <circle cx="196" cy="60" r="2" fill="#FFE4B5" opacity="0.4" class="ghibli-sparkle s1"/>
+                        <circle cx="44" cy="70" r="1.5" fill="#FFE4B5" opacity="0.35" class="ghibli-sparkle s2"/>
+                        <circle cx="200" cy="148" r="1.8" fill="#FFD700" opacity="0.25" class="ghibli-sparkle s3"/>
+                    </svg>
+                    <p class="character-label">Me &#x1F60E;</p>
+                </div>
+
+                <div class="heart-between">
+                    <span class="pulsing-heart">&#x1F495;</span>
+                </div>
+
+                <div class="character-wrapper her-wrapper">
+                    <!-- GHIBLI HER - SMILING (soft, luminous, flowing) -->
+                    <svg viewBox="0 0 230 340" class="cartoon-her ghibli-style" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <radialGradient id="gSkinH" cx="38%" cy="30%">
+                                <stop offset="0%" stop-color="#7A5030"/>
+                                <stop offset="50%" stop-color="#5D3A1A"/>
+                                <stop offset="100%" stop-color="#3D2510"/>
+                            </radialGradient>
+                            <radialGradient id="gIrisH" cx="35%" cy="35%">
+                                <stop offset="0%" stop-color="#4A3020"/>
+                                <stop offset="100%" stop-color="#1a0f08"/>
+                            </radialGradient>
+                        </defs>
+
+                        <!-- Soft glow -->
+                        <ellipse cx="115" cy="170" rx="85" ry="130" fill="#FFE8D6" opacity="0.06"/>
+                        <ellipse cx="115" cy="322" rx="38" ry="4" fill="#3D2510" opacity="0.04"/>
+
+                        <!-- === LEGS === -->
+                        <path d="M 88 262 Q 86 282 88 298 Q 90 306 98 306" fill="#2D2D3A"/>
+                        <path d="M 108 262 Q 110 282 108 298 Q 106 306 98 306" fill="#3a3a4a"/>
+                        <path d="M 122 262 Q 120 282 122 298 Q 124 306 132 306" fill="#2D2D3A"/>
+                        <path d="M 142 262 Q 144 282 142 298 Q 140 306 132 306" fill="#3a3a4a"/>
+                        <!-- Delicate heels -->
+                        <ellipse cx="98" cy="308" rx="13" ry="5" fill="#C4707A" stroke="#A85A65" stroke-width="0.8"/>
+                        <ellipse cx="132" cy="308" rx="13" ry="5" fill="#C4707A" stroke="#A85A65" stroke-width="0.8"/>
+
+                        <!-- === BODY (curvy hourglass! warm coral top) === -->
+                        <!-- Torso with waist definition -->
+                        <path d="M 70 188 Q 70 178 84 174 L 146 174 Q 160 178 160 188 L 162 218 Q 162 224 155 226 Q 140 232 115 232 Q 90 232 75 226 Q 68 224 68 218 Z" fill="#D4846A" stroke="#B86B55" stroke-width="1.2"/>
+                        <!-- Wider hips/skirt area -->
+                        <path d="M 68 226 Q 64 232 64 240 L 64 264 Q 64 270 74 270 L 156 270 Q 166 270 166 264 L 166 240 Q 166 232 162 226 Q 140 232 115 232 Q 90 232 68 226 Z" fill="#2D2D3A" stroke="#222230" stroke-width="1"/>
+                        <!-- Soft neckline -->
+                        <path d="M 92 174 Q 115 186 138 174" fill="#C47860" stroke="#B06A52" stroke-width="1"/>
+
+                        <!-- === ARMS (slender, feminine) === -->
+                        <path d="M 70 192 Q 54 198 48 216 Q 44 232 50 248" fill="url(#gSkinH)" stroke="#3D2510" stroke-width="1.2"/>
+                        <path d="M 160 192 Q 176 198 182 216 Q 186 232 180 248" fill="url(#gSkinH)" stroke="#3D2510" stroke-width="1.2"/>
+                        <circle cx="52" cy="251" r="10" fill="url(#gSkinH)" stroke="#3D2510" stroke-width="1"/>
+                        <circle cx="178" cy="251" r="10" fill="url(#gSkinH)" stroke="#3D2510" stroke-width="1"/>
+                        <!-- Gold bracelet -->
+                        <ellipse cx="52" cy="243" rx="11" ry="3" fill="none" stroke="#C9A836" stroke-width="1.5"/>
+                        <ellipse cx="52" cy="242" rx="8" ry="2" fill="none" stroke="#E8D080" stroke-width="0.5" opacity="0.5"/>
+
+                        <!-- === NECK === -->
+                        <rect x="104" y="158" width="22" height="20" rx="6" fill="url(#gSkinH)" stroke="#3D2510" stroke-width="1"/>
+                        <!-- Gold necklace (always present!) -->
+                        <path d="M 88 175 Q 115 190 142 175" stroke="#C9A836" fill="none" stroke-width="1.5"/>
+                        <circle cx="115" cy="186" r="3.5" fill="#E8C840" stroke="#C9A836" stroke-width="0.8"/>
+                        <circle cx="115" cy="186" r="1.5" fill="#F8E8A0" opacity="0.6"/>
+
+                        <!-- === HAIR (long braids flowing down, behind body) === -->
+                        <!-- Left braid -->
+                        <path d="M 58 78 Q 46 150 42 220 Q 38 260 44 290" fill="#0D0D0D" stroke="#080808" stroke-width="1"/>
+                        <path d="M 52 82 Q 40 150 36 220 Q 32 260 38 295" fill="#151515"/>
+                        <!-- Braid texture lines -->
+                        <path d="M 46 140 Q 44 150 46 160" stroke="#222" fill="none" stroke-width="1" opacity="0.15"/>
+                        <path d="M 44 180 Q 42 190 44 200" stroke="#222" fill="none" stroke-width="1" opacity="0.15"/>
+                        <path d="M 42 220 Q 40 230 42 240" stroke="#222" fill="none" stroke-width="1" opacity="0.12"/>
+                        <!-- Right braid -->
+                        <path d="M 172 78 Q 184 150 188 220 Q 192 260 186 290" fill="#0D0D0D" stroke="#080808" stroke-width="1"/>
+                        <path d="M 178 82 Q 190 150 194 220 Q 198 260 192 295" fill="#151515"/>
+                        <path d="M 184 140 Q 186 150 184 160" stroke="#222" fill="none" stroke-width="1" opacity="0.15"/>
+                        <path d="M 186 180 Q 188 190 186 200" stroke="#222" fill="none" stroke-width="1" opacity="0.15"/>
+
+                        <!-- === HEAD === -->
+                        <ellipse cx="115" cy="100" rx="54" ry="58" fill="url(#gSkinH)" stroke="#3D2510" stroke-width="1.2"/>
+                        <!-- Warm face light -->
+                        <ellipse cx="104" cy="78" rx="28" ry="16" fill="#7A5030" opacity="0.1"/>
+
+                        <!-- === HAIR ON TOP (cornrow braids) === -->
+                        <path d="M 61 92 Q 58 38 115 28 Q 172 38 169 92" fill="#0D0D0D" stroke="#080808" stroke-width="1.2"/>
+                        <path d="M 65 88 Q 64 44 115 34 Q 166 44 165 88" fill="#151515"/>
+                        <!-- Cornrow braid lines (distinctive!) -->
+                        <path d="M 82 42 Q 98 34 115 32" stroke="#222" fill="none" stroke-width="1.5" opacity="0.25"/>
+                        <path d="M 90 48 Q 102 40 115 38" stroke="#222" fill="none" stroke-width="1" opacity="0.2"/>
+                        <path d="M 115 32 Q 132 34 148 42" stroke="#222" fill="none" stroke-width="1.5" opacity="0.25"/>
+                        <path d="M 115 38 Q 128 40 140 48" stroke="#222" fill="none" stroke-width="1" opacity="0.2"/>
+                        <!-- Centre part -->
+                        <line x1="115" y1="30" x2="115" y2="52" stroke="#222" stroke-width="1" opacity="0.2"/>
+                        <!-- Soft hair shine -->
+                        <path d="M 86 44 Q 100 36 115 40" stroke="white" fill="none" stroke-width="1.2" opacity="0.06"/>
+
+                        <!-- === EARS === -->
+                        <ellipse cx="61" cy="104" rx="7" ry="13" fill="url(#gSkinH)" stroke="#3D2510" stroke-width="1"/>
+                        <ellipse cx="169" cy="104" rx="7" ry="13" fill="url(#gSkinH)" stroke="#3D2510" stroke-width="1"/>
+                        <!-- Gold stud earrings -->
+                        <circle cx="61" cy="112" r="3" fill="#E8C840" stroke="#C9A836" stroke-width="0.8"/>
+                        <circle cx="61" cy="112" r="1.2" fill="#F8E8A0" opacity="0.6"/>
+                        <circle cx="169" cy="112" r="3" fill="#E8C840" stroke="#C9A836" stroke-width="0.8"/>
+                        <circle cx="169" cy="112" r="1.2" fill="#F8E8A0" opacity="0.6"/>
+
+                        <!-- === EYES (Ghibli: very large, luminous, detailed) === -->
+                        <!-- Left eye -->
+                        <ellipse cx="96" cy="98" rx="14" ry="17" fill="white" stroke="#3D2510" stroke-width="1.2"/>
+                        <circle cx="97" cy="101" r="11" fill="url(#gIrisH)"/>
+                        <circle cx="97" cy="101" r="8" fill="none" stroke="#3D2510" stroke-width="0.4" opacity="0.2"/>
+                        <circle cx="97" cy="101" r="6" fill="#0D0D0D"/>
+                        <ellipse cx="101" cy="95" rx="5" ry="4.5" fill="white" opacity="0.9"/>
+                        <circle cx="93" cy="106" r="3" fill="white" opacity="0.5"/>
+                        <circle cx="100" cy="101" r="1.2" fill="#7A5030" opacity="0.3"/>
+                        <!-- Delicate upper lid -->
+                        <path d="M 82 86 Q 96 80 110 86" stroke="#1a1a1a" fill="none" stroke-width="1.8" stroke-linecap="round"/>
+                        <!-- Soft Ghibli lashes -->
+                        <path d="M 82 86 Q 78 80 77 77" stroke="#1a1a1a" fill="none" stroke-width="1.2" stroke-linecap="round"/>
+                        <path d="M 88 83 Q 86 78 86 75" stroke="#1a1a1a" fill="none" stroke-width="1" stroke-linecap="round"/>
+                        <path d="M 96 82 Q 96 76 96 73" stroke="#1a1a1a" fill="none" stroke-width="1" stroke-linecap="round"/>
+                        <path d="M 104 83 Q 105 78 106 75" stroke="#1a1a1a" fill="none" stroke-width="1" stroke-linecap="round"/>
+                        <path d="M 110 86 Q 113 80 115 77" stroke="#1a1a1a" fill="none" stroke-width="1.2" stroke-linecap="round"/>
+                        <!-- Right eye -->
+                        <ellipse cx="134" cy="98" rx="14" ry="17" fill="white" stroke="#3D2510" stroke-width="1.2"/>
+                        <circle cx="133" cy="101" r="11" fill="url(#gIrisH)"/>
+                        <circle cx="133" cy="101" r="8" fill="none" stroke="#3D2510" stroke-width="0.4" opacity="0.2"/>
+                        <circle cx="133" cy="101" r="6" fill="#0D0D0D"/>
+                        <ellipse cx="137" cy="95" rx="5" ry="4.5" fill="white" opacity="0.9"/>
+                        <circle cx="129" cy="106" r="3" fill="white" opacity="0.5"/>
+                        <circle cx="136" cy="101" r="1.2" fill="#7A5030" opacity="0.3"/>
+                        <path d="M 120 86 Q 134 80 148 86" stroke="#1a1a1a" fill="none" stroke-width="1.8" stroke-linecap="round"/>
+                        <path d="M 120 86 Q 117 80 115 77" stroke="#1a1a1a" fill="none" stroke-width="1.2" stroke-linecap="round"/>
+                        <path d="M 126 83 Q 124 78 124 75" stroke="#1a1a1a" fill="none" stroke-width="1" stroke-linecap="round"/>
+                        <path d="M 134 82 Q 134 76 134 73" stroke="#1a1a1a" fill="none" stroke-width="1" stroke-linecap="round"/>
+                        <path d="M 142 83 Q 143 78 144 75" stroke="#1a1a1a" fill="none" stroke-width="1" stroke-linecap="round"/>
+                        <path d="M 148 86 Q 151 80 153 77" stroke="#1a1a1a" fill="none" stroke-width="1.2" stroke-linecap="round"/>
+
+                        <!-- Defined arched eyebrows -->
+                        <path d="M 82 78 Q 96 71 110 78" stroke="#1a1a1a" fill="none" stroke-width="1.8" stroke-linecap="round"/>
+                        <path d="M 120 78 Q 134 71 148 78" stroke="#1a1a1a" fill="none" stroke-width="1.8" stroke-linecap="round"/>
+
+                        <!-- Tiny Ghibli nose -->
+                        <path d="M 113 114 Q 115 118 117 114" stroke="#4A2D18" fill="none" stroke-width="1" opacity="0.35" stroke-linecap="round"/>
+
+                        <!-- Full lips (warm, soft) -->
+                        <path d="M 102 122 Q 108 120 115 124 Q 122 120 128 122" fill="#8B5040" stroke="#6B3A2A" stroke-width="0.8"/>
+                        <path d="M 102 123 Q 115 134 128 123" fill="#9B6050" stroke="#6B3A2A" stroke-width="0.8"/>
+                        <ellipse cx="115" cy="127" rx="6" ry="2" fill="#B07060" opacity="0.3"/>
+                        <path d="M 106 124 Q 115 128 124 124" fill="white" opacity="0.6"/>
+
+                        <!-- Ghibli blush -->
+                        <ellipse cx="78" cy="114" rx="12" ry="5" fill="#C48060" opacity="0.15"/>
+                        <ellipse cx="152" cy="114" rx="12" ry="5" fill="#C48060" opacity="0.15"/>
+
+                        <!-- Floating light particles -->
+                        <circle cx="34" cy="60" r="2.5" fill="#FFE4B5" opacity="0.4" class="ghibli-sparkle s1"/>
+                        <circle cx="196" cy="50" r="2" fill="#FFD700" opacity="0.35" class="ghibli-sparkle s2"/>
+                        <circle cx="30" cy="140" r="1.8" fill="#FFF" opacity="0.3" class="ghibli-sparkle s3"/>
+                        <circle cx="200" cy="130" r="2.2" fill="#FFE4B5" opacity="0.3" class="ghibli-sparkle s1"/>
+                    </svg>
+                    <p class="character-label">You &#x1F451;</p>
+                </div>
+            </div>
+
+            <button class="btn-next" id="btn-to-memories">But first... let me remind you of something &#x1F440;</button>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 3: MEMORY LANE ===== -->
+    <section id="memory-screen" class="screen">
+        <div class="memory-content">
+            <h2 class="section-title">Our Story So Far... &#x1F4F8;</h2>
+            <p class="section-subtitle">A quick recap in case you forgot how amazing we are together</p>
+
+            <div class="gallery-container">
+                <button class="gallery-arrow gallery-prev" id="gallery-prev">&#x276E;</button>
+                <div class="gallery-viewport">
+                <div class="gallery-track" id="gallery-track">
+                    <div class="polaroid">
+                        <div class="polaroid-img">
+                            <img src="images/0C562931-3908-4F83-AA06-83FFC9EA512F_1_105_c.jpeg" alt="Marathon together" loading="lazy">
+                        </div>
+                        <p class="polaroid-caption">The couple that suffers together, stays together &#x1F3C5;&#x1F4AA;</p>
+                    </div>
+                    <div class="polaroid">
+                        <div class="polaroid-img">
+                            <img src="images/734F828A-3CE9-4E63-84AA-A0A68C963AB8_1_105_c.jpeg" alt="Beach vibes">
+                        </div>
+                        <p class="polaroid-caption">Professional beach bums since day one &#x1F3D6;&#xFE0F;</p>
+                    </div>
+                    <div class="polaroid">
+                        <div class="polaroid-img">
+                            <img src="images/BC1E4EBE-8178-4D02-ABC7-FC5A75FBC2C2_1_105_c.jpeg" alt="Celebration dinner">
+                        </div>
+                        <p class="polaroid-caption">Celebrating us! (any excuse for cake honestly) &#x1F382;</p>
+                    </div>
+                    <div class="polaroid">
+                        <div class="polaroid-img">
+                            <img src="images/20B39B5E-2C03-42B0-8206-0CE7D0B55652_1_105_c.jpeg" alt="Mirror selfie">
+                        </div>
+                        <p class="polaroid-caption">Main characters. No debate. &#x1F4F8;&#x2728;</p>
+                    </div>
+                    <div class="polaroid">
+                        <div class="polaroid-img">
+                            <img src="images/E133A5FD-811F-462D-98B4-41DE0F6F27D0_1_105_c.jpeg" alt="Date night">
+                        </div>
+                        <p class="polaroid-caption">Date night with the prettiest girl in the room &#x1F60D;</p>
+                    </div>
+                    <div class="polaroid">
+                        <div class="polaroid-img">
+                            <img src="images/07C9ADB6-0B49-4F54-87B1-60EA65A5ACBE_1_105_c.jpeg" alt="Beach relaxing">
+                        </div>
+                        <p class="polaroid-caption">Living our best life, one vacation at a time &#x1F334;</p>
+                    </div>
+                    <div class="polaroid">
+                        <div class="polaroid-img">
+                            <img src="images/DAB2F5E0-CEA1-4133-8746-E47442000585_1_105_c.jpeg" alt="Beach queen">
+                        </div>
+                        <p class="polaroid-caption">How am I supposed to NOT be your Valentine?? &#x1F60F;</p>
+                    </div>
+                    <div class="polaroid">
+                        <div class="polaroid-img">
+                            <img src="images/4ECEAD7E-1AFB-47CA-A3D8-62B8F40ED291_1_105_c.jpeg" alt="Couple goals">
+                        </div>
+                        <p class="polaroid-caption">The height difference is ~aesthetic~ &#x1F4CF;&#x2728;</p>
+                    </div>
+                </div>
+                </div>
+                <button class="gallery-arrow gallery-next" id="gallery-next">&#x276F;</button>
+            </div>
+
+            <div class="gallery-dots" id="gallery-dots"></div>
+
+            <button class="btn-next" id="btn-to-reasons">OK now for the important part... &#x1F624;</button>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 4: REASONS ===== -->
+    <section id="reasons-screen" class="screen">
+        <div class="reasons-content">
+            <h2 class="section-title">Why You Should Say YES &#x1F4DD;</h2>
+            <p class="section-subtitle">(I made a whole PowerPoint but this is the summary)</p>
+
+            <ul class="reasons-list" id="reasons-list">
+                <li class="reason-item">
+                    <span class="reason-emoji">&#x1F4CF;</span>
+                    <span class="reason-text">I make you look adorably short (you're welcome for the perspective)</span>
+                </li>
+                <li class="reason-item">
+                    <span class="reason-emoji">&#x1F4AA;</span>
+                    <span class="reason-text">Free personal bodyguard & gym buddy for life</span>
+                </li>
+                <li class="reason-item">
+                    <span class="reason-emoji">&#x1F6CF;&#xFE0F;</span>
+                    <span class="reason-text">I let you steal ALL the blankets (and only complain a little)</span>
+                </li>
+                <li class="reason-item">
+                    <span class="reason-emoji">&#x1F3C3;</span>
+                    <span class="reason-text">We survived a whole marathon together and I didn't complain... much</span>
+                </li>
+                <li class="reason-item">
+                    <span class="reason-emoji">&#x1F4F8;</span>
+                    <span class="reason-text">I take elite mirror selfies of us (I know my angles)</span>
+                </li>
+                <li class="reason-item">
+                    <span class="reason-emoji">&#x1F355;</span>
+                    <span class="reason-text">Who else will order extra food just so you can "taste" it?</span>
+                </li>
+                <li class="reason-item">
+                    <span class="reason-emoji">&#x1F30D;</span>
+                    <span class="reason-text">Adventure buddy who'll chase waterfalls with you, literally</span>
+                </li>
+            </ul>
+
+            <button class="btn-next" id="btn-to-question">So about that question... &#x1F449;&#x1F448;</button>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 5: THE QUESTION ===== -->
+    <section id="question-screen" class="screen">
+        <div class="question-content">
+            <div class="question-character">
+                <!-- CHIBI HIM - KNEELING WITH ROSE (super deformed kawaii!) -->
+                <svg viewBox="0 0 280 300" class="cartoon-him chibi-bounce" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <radialGradient id="cSkin" cx="38%" cy="32%">
+                            <stop offset="0%" stop-color="#7A5030"/>
+                            <stop offset="60%" stop-color="#5D3A1A"/>
+                            <stop offset="100%" stop-color="#4A2D18"/>
+                        </radialGradient>
+                    </defs>
+
+                    <!-- Cute pink shadow -->
+                    <ellipse cx="120" cy="286" rx="55" ry="6" fill="#E8B4C8" opacity="0.25"/>
+
+                    <!-- === TINY BODY (chibi proportions!) === -->
+                    <!-- Kneeling tiny leg -->
+                    <path d="M 90 236 Q 90 254 96 264 Q 98 268 94 272" fill="#2a2a2a" stroke="#1a1a1a" stroke-width="1.8"/>
+                    <!-- Forward tiny leg -->
+                    <path d="M 128 238 L 154 256 Q 160 260 160 264" fill="#2a2a2a" stroke="#1a1a1a" stroke-width="1.8"/>
+                    <!-- Round cute shoes -->
+                    <ellipse cx="94" cy="274" rx="10" ry="5" fill="#333" stroke="#1a1a1a" stroke-width="1.5"/>
+                    <ellipse cx="162" cy="266" rx="10" ry="5" fill="#333" stroke="#1a1a1a" stroke-width="1.5"/>
+
+                    <!-- Tiny muscular torso (even chibi him is buff!) -->
+                    <path d="M 74 196 Q 74 190 86 188 L 144 188 Q 156 190 156 196 L 154 240 Q 154 244 146 244 L 84 244 Q 76 244 76 240 Z" fill="#2a2a2a" stroke="#1a1a1a" stroke-width="1.8"/>
+                    <!-- Tiny wide shoulders indicator -->
+                    <path d="M 74 196 Q 68 194 66 196" fill="#2a2a2a" stroke="#1a1a1a" stroke-width="1.5"/>
+                    <path d="M 156 196 Q 162 194 164 196" fill="#2a2a2a" stroke="#1a1a1a" stroke-width="1.5"/>
+
+                    <!-- Tiny left arm (still chunky for chibi) -->
+                    <path d="M 74 200 Q 62 206 58 218" fill="url(#cSkin)" stroke="#4A2D18" stroke-width="1.8"/>
+                    <circle cx="58" cy="222" r="9" fill="url(#cSkin)" stroke="#4A2D18" stroke-width="1.8"/>
+
+                    <!-- Tiny right arm with ROSE -->
+                    <path d="M 156 200 Q 172 198 190 194 Q 204 190 210 186" fill="url(#cSkin)" stroke="#4A2D18" stroke-width="1.8"/>
+                    <circle cx="212" cy="184" r="10" fill="url(#cSkin)" stroke="#4A2D18" stroke-width="1.8"/>
+
+                    <!-- BIG CUTE ROSE -->
+                    <line x1="212" y1="176" x2="212" y2="152" stroke="#4CAF50" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M 212 162 Q 220 158 222 162 Q 220 166 212 162" fill="#4CAF50" stroke="#388E3C" stroke-width="0.8"/>
+                    <circle cx="212" cy="144" r="16" fill="#FF4081" stroke="#E91E63" stroke-width="1.5"/>
+                    <path d="M 204 140 Q 212 132 220 140 Q 216 144 212 148 Q 208 144 204 140" fill="#FF80AB"/>
+                    <path d="M 200 144 Q 206 136 212 140 Q 206 148 200 144" fill="#FF80AB" opacity="0.7"/>
+                    <path d="M 224 144 Q 218 136 212 140 Q 218 148 224 144" fill="#FF80AB" opacity="0.7"/>
+                    <circle cx="212" cy="140" r="4" fill="#FFB6C1" opacity="0.5"/>
+
+                    <!-- === MASSIVE HEAD (bigger than body!) === -->
+                    <rect x="103" y="178" width="18" height="12" rx="5" fill="url(#cSkin)" stroke="#4A2D18" stroke-width="1"/>
+
+                    <!-- Giant bald head -->
+                    <circle cx="112" cy="108" r="78" fill="url(#cSkin)" stroke="#4A2D18" stroke-width="1.8"/>
+                    <!-- Chibi head shine (big, cute) -->
+                    <ellipse cx="86" cy="52" rx="36" ry="16" fill="white" opacity="0.12"/>
+                    <ellipse cx="90" cy="48" rx="20" ry="8" fill="white" opacity="0.1"/>
+
+                    <!-- Round chibi ears -->
+                    <circle cx="34" cy="115" r="14" fill="url(#cSkin)" stroke="#4A2D18" stroke-width="1.8"/>
+                    <circle cx="34" cy="115" r="7" fill="#4A2D18" opacity="0.15"/>
+                    <circle cx="190" cy="115" r="14" fill="url(#cSkin)" stroke="#4A2D18" stroke-width="1.8"/>
+                    <circle cx="190" cy="115" r="7" fill="#4A2D18" opacity="0.15"/>
+
+                    <!-- === ENORMOUS KAWAII EYES === -->
+                    <!-- Left eye -->
+                    <ellipse cx="84" cy="108" rx="24" ry="26" fill="white" stroke="#222" stroke-width="1.8"/>
+                    <circle cx="86" cy="112" r="18" fill="#1a1008"/>
+                    <circle cx="86" cy="112" r="13" fill="#2C1810"/>
+                    <circle cx="86" cy="112" r="8" fill="#0D0D0D"/>
+                    <!-- HUGE highlight -->
+                    <ellipse cx="92" cy="100" rx="8" ry="7" fill="white" opacity="0.95"/>
+                    <circle cx="78" cy="120" r="5" fill="white" opacity="0.65"/>
+                    <!-- Star highlight (kawaii signature!) -->
+                    <path d="M 96 108 L 97.5 104 L 101 106 L 97.5 108 L 96 112 L 94.5 108 L 91 106 L 94.5 104 Z" fill="white" opacity="0.8"/>
+
+                    <!-- Right eye -->
+                    <ellipse cx="140" cy="108" rx="24" ry="26" fill="white" stroke="#222" stroke-width="1.8"/>
+                    <circle cx="138" cy="112" r="18" fill="#1a1008"/>
+                    <circle cx="138" cy="112" r="13" fill="#2C1810"/>
+                    <circle cx="138" cy="112" r="8" fill="#0D0D0D"/>
+                    <ellipse cx="144" cy="100" rx="8" ry="7" fill="white" opacity="0.95"/>
+                    <circle cx="130" cy="120" r="5" fill="white" opacity="0.65"/>
+                    <path d="M 148 108 L 149.5 104 L 153 106 L 149.5 108 L 148 112 L 146.5 108 L 143 106 L 146.5 104 Z" fill="white" opacity="0.8"/>
+
+                    <!-- Tiny raised eyebrows -->
+                    <path d="M 60 74 Q 82 62 106 74" stroke="#1a1a1a" fill="none" stroke-width="2.5" stroke-linecap="round"/>
+                    <path d="M 118 74 Q 140 62 162 74" stroke="#1a1a1a" fill="none" stroke-width="2.5" stroke-linecap="round"/>
+
+                    <!-- Tiny dot nose -->
+                    <circle cx="112" cy="128" r="3.5" fill="#4A2D18" opacity="0.35"/>
+
+                    <!-- CHIBI BEARD (round, simplified, cute) -->
+                    <path d="M 44 128 Q 42 146 50 160 Q 64 182 112 186 Q 160 182 174 160 Q 182 146 180 128 Q 170 142 112 146 Q 54 142 44 128 Z" fill="#0D0D0D" stroke="#080808" stroke-width="1.5"/>
+
+                    <!-- Big cute smile in beard -->
+                    <path d="M 90 160 Q 112 176 134 160" stroke="white" fill="none" stroke-width="2.5" stroke-linecap="round"/>
+                    <path d="M 98 162 Q 112 172 126 162" fill="white" opacity="0.6"/>
+
+                    <!-- KAWAII BLUSH -->
+                    <ellipse cx="52" cy="132" rx="16" ry="8" fill="#FF8A80" opacity="0.3"/>
+                    <ellipse cx="172" cy="132" rx="16" ry="8" fill="#FF8A80" opacity="0.3"/>
+
+                    <!-- Floating hearts -->
+                    <g class="float-heart-1"><text x="16" y="44" font-size="22" opacity="0.7">&#x1F496;</text></g>
+                    <g class="float-heart-2"><text x="186" y="38" font-size="18" opacity="0.6">&#x1F495;</text></g>
+                    <g class="float-heart-3"><text x="4" y="168" font-size="16" opacity="0.45">&#x1F497;</text></g>
+
+                    <!-- Kawaii sparkle stars -->
+                    <g class="kawaii-sparkle">
+                        <path d="M 220 72 L 222 64 L 224 72 L 232 70 L 224 72 L 222 80 L 220 72 L 212 70 Z" fill="#FFD700" opacity="0.6"/>
+                    </g>
+                    <g class="kawaii-sparkle delay2">
+                        <path d="M 242 148 L 243.5 143 L 245 148 L 250 146.5 L 245 148 L 243.5 153 L 242 148 L 237 146.5 Z" fill="#FF69B4" opacity="0.5"/>
+                    </g>
+                    <g class="kawaii-sparkle delay3">
+                        <path d="M 10 80 L 12 74 L 14 80 L 20 78 L 14 80 L 12 86 L 10 80 L 4 78 Z" fill="#87CEEB" opacity="0.5"/>
+                    </g>
+                </svg>
+            </div>
+
+            <h2 class="the-big-question">
+                <span class="question-line">Will You Be</span>
+                <span class="question-line highlight">My Valentine?</span>
+                <span class="rose-emoji">&#x1F339;</span>
+            </h2>
+
+            <div class="answer-buttons" id="answer-buttons">
+                <button class="btn-yes" id="yes-btn">YES! &#x1F495;</button>
+                <button class="btn-no" id="no-btn">No</button>
+            </div>
+            <p class="no-response" id="no-response"></p>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 6: CELEBRATION ===== -->
+    <section id="celebration-screen" class="screen">
+        <div class="celebration-content">
+            <h1 class="celebration-title" id="celebration-title">Processing...</h1>
+
+            <div class="celebration-characters">
+                <div class="couple-together">
+                    <!-- PIXAR COUPLE - TOGETHER (3D cinematic) -->
+                    <svg viewBox="0 0 400 330" class="cartoon-couple pixar-style" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <radialGradient id="pSkin" cx="36%" cy="28%">
+                                <stop offset="0%" stop-color="#8B6040"/>
+                                <stop offset="35%" stop-color="#6B4226"/>
+                                <stop offset="75%" stop-color="#5D3A1A"/>
+                                <stop offset="100%" stop-color="#3D2510"/>
+                            </radialGradient>
+                            <linearGradient id="rimR" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#C49870" stop-opacity="0"/>
+                                <stop offset="80%" stop-color="#C49870" stop-opacity="0"/>
+                                <stop offset="100%" stop-color="#C49870" stop-opacity="0.3"/>
+                            </linearGradient>
+                            <linearGradient id="rimL" x1="100%" y1="0%" x2="0%" y2="0%">
+                                <stop offset="0%" stop-color="#C49870" stop-opacity="0"/>
+                                <stop offset="80%" stop-color="#C49870" stop-opacity="0"/>
+                                <stop offset="100%" stop-color="#C49870" stop-opacity="0.3"/>
+                            </linearGradient>
+                            <linearGradient id="pShirtH" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" stop-color="#D06838"/>
+                                <stop offset="100%" stop-color="#983818"/>
+                            </linearGradient>
+                            <linearGradient id="pShirtM" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" stop-color="#333"/>
+                                <stop offset="100%" stop-color="#1a1a1a"/>
+                            </linearGradient>
+                        </defs>
+
+                        <!-- ===== HER (left, shorter, curvy) ===== -->
+                        <g transform="translate(20, 30)">
+                            <ellipse cx="108" cy="282" rx="40" ry="4" fill="#000" opacity="0.04"/>
+
+                            <!-- Legs -->
+                            <path d="M 84 244 Q 82 262 84 276 Q 86 282 94 282" fill="#2D2D3A"/>
+                            <path d="M 104 244 Q 106 262 104 276 Q 102 282 94 282" fill="#3a3a4a"/>
+                            <path d="M 116 244 Q 114 262 116 276 Q 118 282 126 282" fill="#2D2D3A"/>
+                            <path d="M 136 244 Q 138 262 136 276 Q 134 282 126 282" fill="#3a3a4a"/>
+                            <ellipse cx="94" cy="284" rx="14" ry="5" fill="#A85060"/>
+                            <ellipse cx="94" cy="282" rx="10" ry="3" fill="#B86070" opacity="0.4"/>
+                            <ellipse cx="126" cy="284" rx="14" ry="5" fill="#A85060"/>
+                            <ellipse cx="126" cy="282" rx="10" ry="3" fill="#B86070" opacity="0.4"/>
+
+                            <!-- Curvy body -->
+                            <path d="M 70 172 Q 70 164 82 160 L 134 160 Q 146 164 146 172 L 148 204 Q 148 210 140 212 Q 124 218 108 218 Q 92 218 76 212 Q 68 210 68 204 Z" fill="url(#pShirtH)"/>
+                            <path d="M 68 212 Q 62 218 60 228 L 60 246 Q 60 252 70 252 L 146 252 Q 156 252 156 246 L 156 228 Q 154 218 148 212 Q 124 218 108 218 Q 92 218 68 212 Z" fill="#2D2D3A"/>
+                            <path d="M 70 172 L 70 204 Q 68 210 68 210" fill="url(#rimL)" opacity="0.3"/>
+
+                            <!-- Arms -->
+                            <path d="M 70 176 Q 54 182 48 198 Q 44 214 50 228" fill="url(#pSkin)"/>
+                            <path d="M 70 176 Q 54 182 48 198 Q 44 214 50 228" fill="url(#rimL)" opacity="0.2"/>
+                            <circle cx="52" cy="231" r="10" fill="url(#pSkin)"/>
+                            <!-- Her arm toward him -->
+                            <path d="M 146 180 Q 164 178 178 176" fill="url(#pSkin)"/>
+                            <!-- Bracelet -->
+                            <ellipse cx="52" cy="224" rx="11" ry="3" fill="none" stroke="#C9A836" stroke-width="1.8"/>
+                            <ellipse cx="52" cy="223" rx="8" ry="2" fill="none" stroke="#E8D080" stroke-width="0.5" opacity="0.5"/>
+
+                            <!-- Neck -->
+                            <rect x="96" y="145" width="22" height="18" rx="6" fill="url(#pSkin)"/>
+                            <!-- Necklace -->
+                            <path d="M 84 160 Q 108 172 132 160" stroke="#C9A836" fill="none" stroke-width="1.8"/>
+                            <circle cx="108" cy="168" r="3.5" fill="#E8C840"/>
+                            <circle cx="108" cy="167" r="1.5" fill="#F8E8A0" opacity="0.5"/>
+
+                            <!-- Hair behind -->
+                            <path d="M 60 74 Q 48 140 44 200 Q 40 235 46 260" fill="#111"/>
+                            <path d="M 156 74 Q 168 140 172 200 Q 176 235 170 260" fill="#111"/>
+
+                            <!-- Head -->
+                            <circle cx="108" cy="92" r="50" fill="url(#pSkin)"/>
+                            <path d="M 62 70 Q 58 92 62 114" stroke="#C49870" fill="none" stroke-width="1.5" opacity="0.15"/>
+
+                            <!-- Hair on top -->
+                            <path d="M 58 86 Q 56 34 108 26 Q 160 34 158 86" fill="#111"/>
+                            <path d="M 62 82 Q 64 40 108 32 Q 152 40 154 82" fill="#1a1a1a"/>
+                            <!-- Cornrow lines -->
+                            <path d="M 80 40 Q 94 32 108 30" stroke="#2a2a2a" fill="none" stroke-width="1.5" opacity="0.2"/>
+                            <path d="M 108 30 Q 122 32 136 40" stroke="#2a2a2a" fill="none" stroke-width="1.5" opacity="0.2"/>
+                            <line x1="108" y1="28" x2="108" y2="48" stroke="#2a2a2a" stroke-width="0.8" opacity="0.15"/>
+                            <!-- Hair specular -->
+                            <ellipse cx="92" cy="40" rx="12" ry="3" fill="white" opacity="0.05"/>
+
+                            <!-- Ears + earrings -->
+                            <ellipse cx="58" cy="96" rx="7" ry="12" fill="url(#pSkin)"/>
+                            <ellipse cx="158" cy="96" rx="7" ry="12" fill="url(#pSkin)"/>
+                            <circle cx="58" cy="106" r="3" fill="#E8C840"/>
+                            <circle cx="58" cy="105" r="1.2" fill="#F8E8A0" opacity="0.5"/>
+                            <circle cx="158" cy="106" r="3" fill="#E8C840"/>
+                            <circle cx="158" cy="105" r="1.2" fill="#F8E8A0" opacity="0.5"/>
+
+                            <!-- Happy closed eyes -->
+                            <path d="M 82 90 Q 92 82 102 90" stroke="#1a1008" fill="none" stroke-width="2.5" stroke-linecap="round"/>
+                            <path d="M 114 90 Q 124 82 134 90" stroke="#1a1008" fill="none" stroke-width="2.5" stroke-linecap="round"/>
+                            <path d="M 82 88 Q 92 82 102 88" stroke="#3D2510" fill="none" stroke-width="0.8" opacity="0.12"/>
+                            <path d="M 114 88 Q 124 82 134 88" stroke="#3D2510" fill="none" stroke-width="0.8" opacity="0.12"/>
+                            <!-- Soft lashes -->
+                            <path d="M 82 89 Q 79 85 77 83" stroke="#1a1008" fill="none" stroke-width="1.2" stroke-linecap="round"/>
+                            <path d="M 102 89 Q 105 85 107 83" stroke="#1a1008" fill="none" stroke-width="1.2" stroke-linecap="round"/>
+                            <path d="M 114 89 Q 111 85 109 83" stroke="#1a1008" fill="none" stroke-width="1.2" stroke-linecap="round"/>
+                            <path d="M 134 89 Q 137 85 139 83" stroke="#1a1008" fill="none" stroke-width="1.2" stroke-linecap="round"/>
+                            <!-- Eyebrows -->
+                            <path d="M 82 78 Q 92 72 102 78" stroke="#1a1008" fill="none" stroke-width="1.8" stroke-linecap="round"/>
+                            <path d="M 114 78 Q 124 72 134 78" stroke="#1a1008" fill="none" stroke-width="1.8" stroke-linecap="round"/>
+                            <!-- Nose -->
+                            <path d="M 106 100 Q 108 104 110 100" stroke="#4A2D18" fill="none" stroke-width="1" opacity="0.3" stroke-linecap="round"/>
+                            <!-- Big happy smile -->
+                            <path d="M 92 110 Q 108 124 124 110" fill="#8B5040"/>
+                            <path d="M 96 112 Q 108 122 120 112" fill="white" opacity="0.8"/>
+                            <!-- Blush -->
+                            <ellipse cx="80" cy="104" rx="9" ry="4" fill="#A06858" opacity="0.15"/>
+                            <ellipse cx="136" cy="104" rx="9" ry="4" fill="#A06858" opacity="0.15"/>
+                        </g>
+
+                        <!-- ===== HIM (right, taller, wider, muscular) ===== -->
+                        <g transform="translate(170, -10)">
+                            <ellipse cx="110" cy="312" rx="50" ry="5" fill="#000" opacity="0.04"/>
+
+                            <!-- Legs -->
+                            <path d="M 78 262 Q 76 282 78 300 Q 80 308 90 308" fill="#2D2D3A"/>
+                            <path d="M 104 262 Q 106 282 104 300 Q 102 308 90 308" fill="#3a3a4a"/>
+                            <path d="M 118 262 Q 116 282 118 300 Q 120 308 130 308" fill="#2D2D3A"/>
+                            <path d="M 144 262 Q 146 282 144 300 Q 142 308 130 308" fill="#3a3a4a"/>
+                            <ellipse cx="90" cy="310" rx="16" ry="5" fill="#333"/>
+                            <ellipse cx="90" cy="308" rx="12" ry="3" fill="#444" opacity="0.3"/>
+                            <ellipse cx="130" cy="310" rx="16" ry="5" fill="#333"/>
+                            <ellipse cx="130" cy="308" rx="12" ry="3" fill="#444" opacity="0.3"/>
+
+                            <!-- Wide muscular body -->
+                            <path d="M 46 192 Q 46 180 64 176 L 156 176 Q 174 180 174 192 L 174 264 Q 174 270 164 270 L 56 270 Q 46 270 46 264 Z" fill="url(#pShirtM)"/>
+                            <path d="M 46 192 L 46 264 Q 46 270 56 270" fill="url(#rimL)" opacity="0.25"/>
+                            <!-- Shoulder width indicator -->
+                            <path d="M 46 192 Q 38 190 34 192" fill="url(#pShirtM)"/>
+                            <path d="M 174 192 Q 182 190 186 192" fill="url(#pShirtM)"/>
+
+                            <!-- Muscular arms -->
+                            <!-- His arm toward her -->
+                            <path d="M 46 196 Q 24 194 6 192" fill="url(#pSkin)"/>
+                            <!-- Right arm -->
+                            <path d="M 174 196 Q 196 204 204 226 Q 208 246 198 262" fill="url(#pSkin)"/>
+                            <path d="M 174 196 Q 196 204 204 226 Q 208 246 198 262" fill="url(#rimR)" opacity="0.2"/>
+                            <!-- Arm muscle hint -->
+                            <path d="M 192 218 Q 198 228 194 240" stroke="#3D2510" fill="none" stroke-width="0.6" opacity="0.1"/>
+                            <circle cx="200" cy="265" r="13" fill="url(#pSkin)"/>
+                            <!-- Tattoo -->
+                            <path d="M 190 212 C 196 208 192 200 198 196" stroke="#3D2510" fill="none" stroke-width="1.2" opacity="0.2"/>
+
+                            <!-- Thick neck -->
+                            <rect x="92" y="158" width="36" height="24" rx="8" fill="url(#pSkin)"/>
+                            <!-- Head (3D smooth, bald) -->
+                            <circle cx="110" cy="104" r="60" fill="url(#pSkin)"/>
+                            <!-- Rim light -->
+                            <path d="M 52 78 Q 48 104 52 130" stroke="#C49870" fill="none" stroke-width="1.5" opacity="0.15"/>
+                            <!-- Bald head specular highlights -->
+                            <ellipse cx="88" cy="58" rx="28" ry="12" fill="white" opacity="0.06"/>
+                            <ellipse cx="92" cy="54" rx="16" ry="6" fill="white" opacity="0.05"/>
+
+                            <!-- Ears -->
+                            <ellipse cx="50" cy="110" rx="10" ry="16" fill="url(#pSkin)"/>
+                            <ellipse cx="170" cy="110" rx="10" ry="16" fill="url(#pSkin)"/>
+
+                            <!-- Happy closed eyes -->
+                            <path d="M 76 102 Q 90 92 104 102" stroke="#1a1008" fill="none" stroke-width="2.5" stroke-linecap="round"/>
+                            <path d="M 116 102 Q 130 92 144 102" stroke="#1a1008" fill="none" stroke-width="2.5" stroke-linecap="round"/>
+                            <path d="M 76 100 Q 90 92 104 100" stroke="#3D2510" fill="none" stroke-width="0.8" opacity="0.12"/>
+                            <path d="M 116 100 Q 130 92 144 100" stroke="#3D2510" fill="none" stroke-width="0.8" opacity="0.12"/>
+                            <!-- Eyebrows -->
+                            <path d="M 72 88 Q 90 78 106 88" stroke="#1a1008" fill="none" stroke-width="2.5" stroke-linecap="round"/>
+                            <path d="M 114 88 Q 130 78 148 88" stroke="#1a1008" fill="none" stroke-width="2.5" stroke-linecap="round"/>
+                            <!-- Nose -->
+                            <path d="M 108 118 Q 110 122 112 118" stroke="#4A2D18" fill="none" stroke-width="1" opacity="0.3" stroke-linecap="round"/>
+
+                            <!-- Beard (3D smooth) -->
+                            <path d="M 58 120 Q 56 138 64 154 Q 78 178 110 182 Q 142 178 156 154 Q 164 138 162 120 Q 152 134 110 138 Q 68 134 58 120 Z" fill="#0D0D0D"/>
+                            <path d="M 60 122 Q 58 136 66 150 Q 80 172 110 176" fill="#080808" opacity="0.25"/>
+                            <path d="M 80 135 Q 83 145 81 155" stroke="#1a1a1a" fill="none" stroke-width="0.6" opacity="0.15"/>
+                            <path d="M 140 135 Q 137 145 139 155" stroke="#1a1a1a" fill="none" stroke-width="0.6" opacity="0.15"/>
+                            <!-- Big grin -->
+                            <path d="M 90 150 Q 110 168 130 150" fill="white"/>
+                            <path d="M 90 150 Q 110 168 130 150" fill="none" stroke="#D4C4B0" stroke-width="1.2"/>
+                            <path d="M 94 152 Q 110 162 126 152" fill="#0D0D0D" opacity="0.15"/>
+                        </g>
+
+                        <!-- 3D HEART between them -->
+                        <g class="floating-heart-between">
+                            <path d="M 200 45 C 200 30 186 18 174 26 C 162 12 146 26 146 45 C 146 70 174 88 174 88 C 174 88 202 70 202 45 Z" fill="#D81B60"/>
+                            <ellipse cx="162" cy="36" rx="6" ry="8" fill="#E91E63" opacity="0.4"/>
+                            <path d="M 174 88 C 174 88 202 70 202 45 C 202 34 196 24 188 22" fill="#9B1248" opacity="0.2"/>
+                        </g>
+
+                        <!-- Cinematic particles -->
+                        <circle cx="80" cy="20" r="2" fill="#FFD700" opacity="0.25" class="ghibli-sparkle s1"/>
+                        <circle cx="320" cy="30" r="1.5" fill="#FFD700" opacity="0.2" class="ghibli-sparkle s2"/>
+                        <circle cx="200" cy="8" r="2.5" fill="#FF80AB" opacity="0.25" class="ghibli-sparkle s3"/>
+                        <circle cx="50" cy="300" r="1.8" fill="#FFE4B5" opacity="0.15" class="ghibli-sparkle s1"/>
+                        <circle cx="350" cy="290" r="2" fill="#FF80AB" opacity="0.15" class="ghibli-sparkle s2"/>
+                    </svg>
+                </div>
+            </div>
+
+            <p class="celebration-message" id="celebration-message"></p>
+
+            <div class="celebration-photos" id="celebration-photos">
+                <img src="images/0C562931-3908-4F83-AA06-83FFC9EA512F_1_105_c.jpeg" alt="" class="celebration-photo">
+                <img src="images/20B39B5E-2C03-42B0-8206-0CE7D0B55652_1_105_c.jpeg" alt="" class="celebration-photo">
+                <img src="images/734F828A-3CE9-4E63-84AA-A0A68C963AB8_1_105_c.jpeg" alt="" class="celebration-photo">
+            </div>
+
+            <!-- Saturday Plans Picker -->
+            <div class="saturday-plans" id="saturday-plans">
+                <h3 class="plans-title">Now the real question... &#x1F914;</h3>
+                <p class="plans-subtitle">What are we doing this Saturday?</p>
+                <div class="plans-options">
+                    <button class="plan-option" id="plan-dinner">
+                        <span class="plan-emoji">&#x1F37D;&#xFE0F;</span>
+                        <span class="plan-name">Dinner</span>
+                        <span class="plan-desc">Get dressed up & go somewhere nice</span>
+                    </button>
+                    <button class="plan-option" id="plan-picnic">
+                        <span class="plan-emoji">&#x1F3AC;</span>
+                        <span class="plan-name">Indoor Picnic & Movie</span>
+                        <span class="plan-desc">Blankets, snacks & a movie marathon</span>
+                    </button>
+                </div>
+                <p class="plan-response" id="plan-response"></p>
+            </div>
+
+            <p class="celebration-footer">Happy Valentine's Day, Naa &#x2764;&#xFE0F;<br><span class="small-text">- Your favorite person (don't argue) -</span></p>
+        </div>
+    </section>
+
+    <!-- Confetti container -->
+    <div id="confetti-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
